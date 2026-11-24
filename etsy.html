@@ -1,0 +1,13 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Treasured Home</title>
+<p id="m" style="font-family: system-ui, sans-serif; padding: 24px;">Returning to the ATH app...</p>
+<script>
+  // Etsy sends the one-time sign-in code here; hand it to the ATH app.
+  // The code is useless without the secret only the app holds (PKCE).
+  location.replace('athapp://etsy' + location.search);
+  setTimeout(function () {
+    document.getElementById('m').textContent = 'Open the ATH app to finish connecting Etsy.';
+  }, 1500);
+</script>
